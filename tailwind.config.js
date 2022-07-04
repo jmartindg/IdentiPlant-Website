@@ -7,6 +7,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      backgroundImage: {
+        heroBg: "url('/src/assets/hero-bg.jpg')",
+      },
     },
   },
   plugins: [],

@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-white fixed w-full z-50">
       <div className="container mx-auto px-4 lg:px-0 py-4 flex items-center justify-between">
         <div>
           <Link to="/">
@@ -32,10 +32,7 @@ const Navbar = () => {
           <FaBars size={20} />
         </button>
       </div>
-      <div
-        onClick={handleIsOpen}
-        className={isOpen ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black bg-opacity-40" : ""}
-      >
+      <div className={isOpen ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black bg-opacity-40" : ""}>
         <nav
           className={
             isOpen
