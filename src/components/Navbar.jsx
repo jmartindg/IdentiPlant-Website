@@ -48,13 +48,15 @@ const Navbar = () => {
           </div>
           <div>
             <ul className="space-y-10 my-12 inline-block">
-              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">
+              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8" onClick={handleIsOpen}>
                 <Link to="/">Home</Link>
               </li>
-              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">
+              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8" onClick={handleIsOpen}>
                 <Link to="/about">About</Link>
               </li>
-              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">Contact</li>
+              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8" onClick={handleIsOpen}>
+                Contact
+              </li>
             </ul>
           </div>
         </nav>
