@@ -4,6 +4,7 @@ import Mockup from "../assets/mockup.png";
 
 import PlantList from "../components/PlantList";
 import TopPlants from "../components/TopPlants";
+import DownloadBtn from "../components/DownloadBtn";
 
 const Home = () => {
   const title = "Scan and Identify Herbal Plants for free";
@@ -18,9 +19,7 @@ const Home = () => {
             <div className="z-40 md:flex-1 text-center md:text-left">
               <h1 className="text-white font-bold text-4xl lg:text-5xl">{title}</h1>
               <p className="text-white md:text-lg py-6">{subtitle}</p>
-              <a href="#" className="hero-btn" download>
-                Download
-              </a>
+              <DownloadBtn />
             </div>
             <div className="hidden md:flex md:z-10 md:flex-1">
               <img src={Mockup} className="mx-auto md:w-80 lg:w-96" alt="App mockup" />
