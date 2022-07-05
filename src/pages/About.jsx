@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DownloadBtn from "../components/DownloadBtn";
 
 const About = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  });
+
   return (
     <section className="pt-32 pb-20">
       <div className="container mx-auto px-4 lg:px-0">

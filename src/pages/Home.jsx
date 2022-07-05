@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@splidejs/react-splide/css/sea-green";
 import Mockup from "../assets/mockup.png";
 import PlantList from "../components/PlantList";
@@ -8,6 +8,14 @@ import DownloadBtn from "../components/DownloadBtn";
 const Home = () => {
   const title = "Scan and Identify Herbal Plants for free";
   const subtitle = "Download Myranel’s IdentiPlant to scan herbal plants. Available only for Android devices.";
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  });
 
   return (
     <>
