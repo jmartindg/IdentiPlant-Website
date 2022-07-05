@@ -1,7 +1,6 @@
 import React from "react";
 import "@splidejs/react-splide/css/sea-green";
 import Mockup from "../assets/mockup.png";
-
 import PlantList from "../components/PlantList";
 import TopPlants from "../components/TopPlants";
 import DownloadBtn from "../components/DownloadBtn";
