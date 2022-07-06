@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Logo from "../assets/IdentiPlant-Logo-Dark.png";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
@@ -26,7 +27,11 @@ const Navbar = () => {
           <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">
             <Link to="/about">About</Link>
           </li>
-          <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">Contact</li>
+          <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">
+            <ScrollLink className="cursor-pointer" to="contact" smooth={true} duration={500}>
+              Contact
+            </ScrollLink>
+          </li>
         </ul>
         <button onClick={handleIsOpen} className="md:hidden">
           <FaBars size={20} />
@@ -54,8 +59,10 @@ const Navbar = () => {
               <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8" onClick={handleIsOpen}>
                 <Link to="/about">About</Link>
               </li>
-              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8" onClick={handleIsOpen}>
-                Contact
+              <li className="uppercase text-sm font-medium hover:underline hover:underline-offset-8">
+                <ScrollLink onClick={handleIsOpen} className="cursor-pointer" to="contact" smooth={true} duration={500}>
+                  Contact
+                </ScrollLink>
               </li>
             </ul>
           </div>

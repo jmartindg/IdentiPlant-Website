@@ -5,7 +5,7 @@ import Logo from "../assets/Logo-light.png";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <section className="py-20 bg-green-600">
         <div className="container mx-auto px-4 lg:px-0">
           <h2 className="text-gray-100 font-bold text-3xl pb-6 text-center">Where to find Myranel's Plant Shop?</h2>
