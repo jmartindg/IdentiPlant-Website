@@ -30,10 +30,10 @@ const Footer = () => {
                   height="400"
                   id="gmap_canvas"
                   src="https://maps.google.com/maps?q=8%20Greenland%20Plants%20&%20Orchids%20Center%20Cartimar,%20Barangay%2038,%201300%20Pasay%20City%20NCR%20Fourth%20District,%20Philippines&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0"
+                  frameBorder="0"
                   scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
+                  marginHeight="0"
+                  marginWidth="0"
                 ></iframe>
               </div>
             </div>

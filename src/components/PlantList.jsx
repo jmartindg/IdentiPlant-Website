@@ -1,138 +1,51 @@
 import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css/sea-green";
+import { Link } from "react-router-dom";
 import Oregano from "../assets/plants/Oregano.jpg";
-import { AiOutlineHeart } from "react-icons/ai";
 
 const PlantList = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 lg:px-0">
         <h2 className="font-bold text-2xl pb-6 text-center">List of Available Herbal Plants</h2>
-        <Splide
-          tag="section"
-          aria-label="Top herbal plants"
-          options={{
-            perPage: 2,
-            gap: "1.5rem",
-            breakpoints: {
-              640: {
-                perPage: 2,
-              },
-              525: {
-                perPage: 1,
-              },
-              420: {
-                perPage: 1,
-              },
-            },
-          }}
-        >
-          <SplideSlide className="space-y-5">
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-          </SplideSlide>
-          <SplideSlide className="space-y-5">
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-          </SplideSlide>
-          <SplideSlide className="space-y-5">
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-          </SplideSlide>
-          <SplideSlide className="space-y-5">
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-            <article className="bg-white rounded flex items-center overflow-hidden">
-              <div>
-                <img src={Oregano} className="object-cover w-full" alt="Oregano" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold pb-1">Oregano</h3>
-                <div className="flex items-center space-x-1">
-                  <AiOutlineHeart />
-                  <span className="text-sm">56 likes</span>
-                </div>
-              </div>
-            </article>
-          </SplideSlide>
-        </Splide>
+        <div className="grid md:grid-cols-2 gap-5">
+          <article className="bg-white flex items-center rounded overflow-hidden shadow">
+            <div>
+              <img src={Oregano} className="w-28" alt="Oregano" />
+            </div>
+            <div>
+              <h3 className="font-medium md:text-lg pl-5">Oregano</h3>
+            </div>
+          </article>
+          <article className="bg-white flex items-center rounded overflow-hidden shadow">
+            <div>
+              <img src={Oregano} className="w-28" alt="Oregano" />
+            </div>
+            <div>
+              <h3 className="font-medium md:text-lg pl-5">Lagundi</h3>
+            </div>
+          </article>
+          <article className="bg-white flex items-center rounded overflow-hidden shadow">
+            <div>
+              <img src={Oregano} className="w-28" alt="Oregano" />
+            </div>
+            <div>
+              <h3 className="font-medium md:text-lg pl-5">Garlic</h3>
+            </div>
+          </article>
+          <article className="bg-white flex items-center rounded overflow-hidden shadow">
+            <div>
+              <img src={Oregano} className="w-28" alt="Oregano" />
+            </div>
+            <div>
+              <h3 className="font-medium md:text-lg pl-5">Sambong</h3>
+            </div>
+          </article>
+        </div>
+        <div className="pb-10 pt-14 text-center">
+          <Link to="/herbal-plants" className="bg-green-600 text-white px-7 py-4 rounded transition hover:bg-green-500">
+            See More
+          </Link>
+        </div>
       </div>
     </section>
   );
