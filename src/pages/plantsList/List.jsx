@@ -26,7 +26,7 @@ const List = () => {
 
   return (
     <section className="py-28">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 lg:px-0">
         <h2 className="font-bold text-2xl pb-6">List of Available Herbal Plants</h2>
         {loading ? (
           <Loader />

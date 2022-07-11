@@ -28,10 +28,10 @@ const TopPlants = () => {
           {plants
             .map((plant) => (
               <div key={plant.id}>
-                <article className="bg-white rounded overflow-hidden">
+                <article className="bg-white rounded overflow-hidden shadow">
                   <img
                     src={plant.attributes.plant_image.data.attributes.formats.small.url}
-                    className="object-cover w-full h-52"
+                    className="aspect-[16/13]"
                     alt={plant.attributes.plant_name}
                   />
                   <div className="p-4">
