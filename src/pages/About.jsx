@@ -43,7 +43,9 @@ const About = () => {
         </ol>
 
         <h3 className="font-bold text-lg pt-5">Download the App</h3>
-        <small className="text-gray-800">Note: Only for Android Devices.</small>
+        <small className="text-gray-800">
+          Note: Only for Android Devices. Augmented Reality will only work in Myranel's Plant Shop.
+        </small>
         <div className="pt-4">
           <DownloadBtn />
         </div>

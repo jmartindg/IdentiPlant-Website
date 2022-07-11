@@ -24,8 +24,11 @@ const Home = () => {
           <div className="bg-black bg-opacity-70 min-h-screen absolute z-10 w-full"></div>
           <div className="min-h-screen container mx-auto flex md:items-center flex-col justify-center md:flex-row pt-10 px-4 lg:px-0">
             <div className="z-40 md:flex-1 text-center md:text-left">
-              <h1 className="text-white font-bold text-4xl lg:text-5xl">{title}</h1>
-              <p className="text-white md:text-lg py-6">{subtitle}</p>
+              <div className="mb-6">
+                <h1 className="text-white font-bold text-4xl lg:text-5xl">{title}</h1>
+                <p className="text-white md:text-lg pt-6 pb-2">{subtitle}</p>
+                <small className="text-gray-300">Note: Augmented Reality will only work in Myranel's Plant Shop.</small>
+              </div>
               <DownloadBtn />
             </div>
             <div className="hidden md:flex md:z-10 md:flex-1">

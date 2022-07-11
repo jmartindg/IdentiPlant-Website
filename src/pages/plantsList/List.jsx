@@ -7,6 +7,10 @@ const List = () => {
   const [loading, setLoading] = useState(true);
   const endpoint = "https://whispering-lowlands-67883.herokuapp.com/api/posts?populate=*";
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const fetchPlants = async () => {
       setLoading(true);
@@ -17,6 +21,7 @@ const List = () => {
     };
 
     fetchPlants();
+    scrollToTop();
   }, []);
 
   return (
