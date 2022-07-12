@@ -8,7 +8,9 @@ const Footer = () => {
     <footer id="contact">
       <section className="py-20 bg-green-600">
         <div className="container mx-auto px-4 lg:px-0">
-          <h2 className="text-gray-100 font-bold text-3xl pb-6 text-center">Where to find Myranel's Plant Shop?</h2>
+          <h2 className="text-gray-100 font-bold text-2xl md:text-3xl pb-6 text-center">
+            Where to find Myranel's Plant Shop?
+          </h2>
           <div className="flex flex-col items-center space-y-4">
             <div className="text-center flex items-center flex-col md:flex-row">
               <BsPinMapFill className="text-gray-100 text-2xl md:mr-4 mb-2 md:mb-0" />

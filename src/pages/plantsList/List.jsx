@@ -11,6 +11,7 @@ const List = () => {
     window.scrollTo(0, 0);
   };
 
+  // Fetch all herbal plants from api
   useEffect(() => {
     const fetchPlants = async () => {
       setLoading(true);
@@ -33,20 +34,22 @@ const List = () => {
         ) : (
           <div className="grid md:grid-cols-2 gap-5 pt-4">
             {plants.map((plant) => (
-              <div key={plant.id}>
-                <article className="bg-white flex items-center rounded overflow-hidden shadow">
-                  <div>
-                    <img
-                      src={plant.attributes.plant_image.data.attributes.formats.thumbnail.url}
-                      className="w-28 h-24 object-cover"
-                      alt={plant.attributes.plant_name}
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-medium md:text-lg pl-5">{plant.attributes.plant_name}</h3>
-                  </div>
-                </article>
-              </div>
+              <Link to={`/herbal-plant-details/${plant.id}`} className="transition hover:-translate-y-1" key={plant.id}>
+                <div>
+                  <article className="bg-white flex items-center rounded overflow-hidden shadow">
+                    <div>
+                      <img
+                        src={plant.attributes.plant_image.data.attributes.formats.thumbnail.url}
+                        className="w-28 h-24 object-cover"
+                        alt={plant.attributes.plant_name}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-medium md:text-lg pl-5">{plant.attributes.plant_name}</h3>
+                    </div>
+                  </article>
+                </div>
+              </Link>
             ))}
           </div>
         )}

@@ -5,6 +5,7 @@ const PlantList = () => {
   const [plants, setPlants] = useState([]);
   const endpoint = "https://whispering-lowlands-67883.herokuapp.com/api/posts?populate=*";
 
+  // Fetch all herbal plants from api
   useEffect(() => {
     const fetchPlants = async () => {
       const response = await fetch(`${endpoint}`);
@@ -22,7 +23,7 @@ const PlantList = () => {
         <div className="grid md:grid-cols-2 gap-5">
           {plants
             .map((plant) => (
-              <div key={plant.id}>
+              <Link to={`/herbal-plant-details/${plant.id}`} className="transition hover:-translate-y-1" key={plant.id}>
                 <article className="bg-white flex items-center rounded overflow-hidden shadow">
                   <div>
                     <img
@@ -35,7 +36,7 @@ const PlantList = () => {
                     <h3 className="font-medium md:text-lg pl-5">{plant.attributes.plant_name}</h3>
                   </div>
                 </article>
-              </div>
+              </Link>
             ))
             .slice(0, 4)}
         </div>

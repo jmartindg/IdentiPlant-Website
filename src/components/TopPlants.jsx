@@ -35,7 +35,7 @@ const TopPlants = () => {
                     alt={plant.attributes.plant_name}
                   />
                   <div className="p-4">
-                    <h3 className="text-lg font-bold pb-1">{plant.attributes.plant_name}</h3>
+                    <h3 className="md:text-lg font-bold pb-1 truncate">{plant.attributes.plant_name}</h3>
                     <div className="flex items-center space-x-1">
                       <AiOutlineHeart />
                       <span className="text-sm">56 likes</span>
