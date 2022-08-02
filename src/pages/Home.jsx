@@ -15,6 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     scrollToTop();
+    document.title = "IdentiPlant - Download the App for Free";
   });
 
   return (

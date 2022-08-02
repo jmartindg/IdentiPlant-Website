@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 import Loader from "../../components/Loader";
 
 const PlantDetails = () => {
@@ -31,7 +32,14 @@ const PlantDetails = () => {
 
     fetchPlantDetails();
     scrollToTop();
-  }, [id]);
+
+    // Change the page title
+    if (plantDetails.length === 0) {
+      document.title = "Loading";
+    } else {
+      document.title = `IdentiPlant - ${plantDetails.plant_name}`;
+    }
+  }, [id, plantDetails.plant_name]);
 
   return (
     <>
@@ -56,13 +64,13 @@ const PlantDetails = () => {
               <span className="font-medium">Published:</span> {formatDate(plantDetails.publishedAt)} &bull;{" "}
               <span className="font-medium">Updated:</span> {formatDate(plantDetails.updatedAt)}
             </p>
-            <p className="py-5 text-zinc-900">{plantDetails.plant_description}</p>
+            <ReactMarkdown className="py-5 text-zinc-900">{plantDetails.plant_description}</ReactMarkdown>
             <h3 className="font-semibold text-xl">Benefits</h3>
-            <p className="py-5 text-zinc-900">{plantDetails.plant_benefits}</p>
+            <ReactMarkdown className="py-5 text-zinc-900">{plantDetails.plant_benefits}</ReactMarkdown>
             <h3 className="font-semibold text-xl">Uses</h3>
-            <p className="py-5 text-zinc-900">{plantDetails.plant_uses}</p>
+            <ReactMarkdown className="py-5 text-zinc-900">{plantDetails.plant_uses}</ReactMarkdown>
             <h3 className="font-semibold text-xl">Tips</h3>
-            <p className="py-5 text-zinc-900">{plantDetails.plant_tips}</p>
+            <ReactMarkdown className="py-5 text-zinc-900">{plantDetails.plant_tips}</ReactMarkdown>
           </div>
         </section>
       )}

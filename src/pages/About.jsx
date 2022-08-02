@@ -8,6 +8,7 @@ const About = () => {
 
   useEffect(() => {
     scrollToTop();
+    document.title = "IdentiPlant - About";
   });
 
   return (
